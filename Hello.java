@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Hello {
     
     public static void main(String[] args) {
@@ -23,6 +25,11 @@ public class Hello {
 
         reversArray();
 
+        emptyArray();
+
+        editArray();
+
+        mirrorTable();
     }
     
     public static void checkSomeSing(int a, int b) {
@@ -100,7 +107,38 @@ public class Hello {
             if (binar[i] == 1) {
                 binar[i] = 0;
             } else binar[i] = 1;
-            System.out.println(binar[i]);
+        }
+        System.out.println(Arrays.toString(binar));
+    }
+
+    public static void emptyArray() {
+        int[] arr = new int[100];
+        for(int i = 0; i < arr.length; i++ ) {
+            arr[i] = i+1;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+    public static void editArray() {
+        int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for(int i = 0; i < arr.length; i++ ) {
+           if (arr[i] < 6) {
+             arr[i] = arr[i]*2;
+           }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+    public static void mirrorTable() {
+        int[] [] table = new int[10][10];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (i == j) {
+                    table[i] [j] = 1;
+                } else table[i] [j] = 0;
+                System.out.println(table[i] [j] + " ");
+            }
+            System.out.println();
         }
     }
 }
