@@ -30,6 +30,8 @@ public class Hello {
         editArray();
 
         mirrorTable();
+
+        createArray(5, 9);
     }
     
     public static void checkSomeSing(int a, int b) {
@@ -133,12 +135,20 @@ public class Hello {
         int[] [] table = new int[10][10];
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                if (i == j) {
+                if (i == j || 4 - i == j - 5) {
                     table[i] [j] = 1;
                 } else table[i] [j] = 0;
                 System.out.println(table[i] [j] + " ");
             }
             System.out.println();
         }
+    }
+
+    public static void createArray(int len, int initialValue) {
+        int[] arr = new int[len];
+        for (int i = 0; i < len; i++ ){
+            arr[i] = initialValue;
+        }
+        System.out.println(Arrays.toString(arr));
     }
 }
