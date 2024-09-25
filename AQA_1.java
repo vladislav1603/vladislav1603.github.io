@@ -4,15 +4,15 @@ public class AQA_1 {
     
     public static void main(String[] args) {
 
-        System.out.println("Orange,\nBanana,\nApple");
+        printTreeWords();
 
-        checkSomeSing(5, -8);
+        checkSumSing(5, -8);
 
         printColor(5);
 
         compareNumbers(1, 4);
 
-        System.out.println(summFilter(5, 7));
+        System.out.println(summFilter(5, 3));
 
         int roundNumber = (int) Math.ceil(6.74);
         numberCheck(roundNumber);
@@ -33,8 +33,12 @@ public class AQA_1 {
 
         createArray(5, 9);
     }
+
+    public static void printTreeWords() {
+        System.out.println("Orange,\nBanana,\nApple.");
+    }
     
-    public static void checkSomeSing(int a, int b) {
+    public static void checkSumSing(int a, int b) {
         int c = a + b;
         if(c >= 0) {
             System.out.println("Сумма положительная");
@@ -46,7 +50,7 @@ public class AQA_1 {
     public static void printColor(int a) {
         if(a <= 0) {
             System.out.println("Красный");
-        } else if (a > 1 && a <= 100){
+        } else if (a >= 1 && a <= 100){
             System.out.println("Желтый");
         } else {
             System.out.println("Зелёный");
@@ -62,11 +66,7 @@ public class AQA_1 {
     }
 
     public static boolean summFilter(int a, int b) {
-        if (a + b >= 10 && a + b <= 20) {
-            return true;
-        } else {
-            return false;
-        }
+        return (a + b >= 10 && a + b <= 20); 
     }
 
     public static void numberCheck(int a) {
@@ -78,11 +78,7 @@ public class AQA_1 {
     }
 
     public static boolean reversCheck(int a) {
-        if (a >= 0) {
-            return false;
-        } else {
-            return true;
-        }
+        return (a >= 0);
     }
 
     public static void cyclePrint(String a, int b) {
@@ -92,15 +88,7 @@ public class AQA_1 {
     }
 
     public static boolean leapCheck(int a) {
-        if (a < 100 && a % 4 == 0) {
-            return true;
-        } else if (a > 100 && a % 100 == 0 && a % 400 == 0) {
-            return true;
-        } else if (a > 100 && a % 100 != 0 && a % 4 == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return (a % 4 == 0 && a % 100 != 0) || (a % 400 == 0);
     }
 
     public static void reversArray() {
@@ -138,7 +126,7 @@ public class AQA_1 {
                 if (i == j || 4 - i == j - 5) {
                     table[i] [j] = 1;
                 } else table[i] [j] = 0;
-                System.out.println(table[i] [j] + " ");
+                System.out.print(" " + table[i] [j] + " ");
             }
             System.out.println();
         }
