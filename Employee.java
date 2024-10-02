@@ -5,9 +5,6 @@ public class Employee {
     private String email = "Morozov@gmail.com";
     private int salary = 15000;
     private int age = 54;
-    public static void main(String[] args) {
-        printInfo()
-    }
     public Employee (String firstName, String lastName, String position, String email, int salary, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -16,7 +13,11 @@ public class Employee {
         this.salary = salary;
         this.age = age;
     }
-    public void printInfo() {
+    public void printInfo(String[] args) {
         System.out.println("ФИО: " + firstName + "" + lastName);
+        System.out.println("Должность: " + position);
+        System.out.println("Почта: " + email);
+        System.out.println("Зарплата: " + salary + " рублей");
+        System.out.println("Возраст: " + age + " лет");
     }
 }
