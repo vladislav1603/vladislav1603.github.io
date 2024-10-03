@@ -6,12 +6,12 @@ public class Employee {
     private int salary;
     private int age;
     public Employee (String firstName, String lastName, String position, String email, int salary, int age) {
-        this.firstName = "Дмитрий";
-        this.lastName = "Морозов";
-        this.position = "Директор";
-        this.email = "Morozov@gmail.com";
-        this.salary = 15000;
-        this.age = 54;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.position = position;
+        this.email = email;
+        this.salary = salary;
+        this.age = age;
     }
 
     public static void main(String[] args) {
