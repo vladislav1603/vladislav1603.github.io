@@ -20,5 +20,18 @@ public class Task1 {
         System.out.println("max = " + max);
         System.out.println("min = " + min);
         System.out.println("avg = " + avg);
+        for (int i = 2; i <= array.length; i ++) {
+            boolean isPrime = true;
+
+            for (int j = 2; j < i; i++){
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+                if (isPrime) {
+                    System.out.println(i);
+                }
+            }
+        }
      }
 }
