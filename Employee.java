@@ -16,6 +16,10 @@ public class Employee {
     }
     public static void main(String[] args) {
         Employee president = new Employee("Дмитрий", "Морозов", "Президент", "morozov@gmail.com", 1500000, 60);
-        System.out.println("ФИО: " + president.firstName + " " + president.lastName + ";" + "" );
+        System.out.println("ФИО: " + president.firstName + " " + president.lastName + ";");
+        System.out.println("Должность: " + president.position + ";");
+        System.out.println("Почта: " + president.email + ";");
+        System.out.println("Оклад: " + president.salary + "$;");
+        System.out.println("Возраст: " + president.age + " лет;");
     }
 }
