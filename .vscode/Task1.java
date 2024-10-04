@@ -1,5 +1,9 @@
 public class Task1 {
     public static void main(String[] args) {
+        Task11_12(args);
+    }
+
+    public static void Task11_12(String[] args) {
         int n = 50;
         double[] array = new double[n];
         for(int i = 0; i < array.length; i ++){
@@ -9,10 +13,10 @@ public class Task1 {
         double min = array[0];
         double avg = 0;
         for(int i = 0; i < array.length; i ++){
-            if(max < array[i]);{
+            if (max < array[i]) {
                 max = array[i];
             } 
-            if (min > array[i]){
+            if (min > array[i]) {
                 min = array[i];
             }
             avg += array[i]/array.length;
@@ -35,7 +39,7 @@ public class Task1 {
         }
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
-                if(array[j] > array[j + 1]) {
+                if (array[j] > array[j + 1]) {
                     double temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
