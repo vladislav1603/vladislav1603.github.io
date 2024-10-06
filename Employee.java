@@ -14,12 +14,26 @@ public class Employee {
         this.salary = salary;
         this.age = age;
     }
-    public static void main(String[] args) {
+
+    public void employee() {
         Employee president = new Employee("Дмитрий", "Морозов", "Президент", "morozov@gmail.com", 1500000, 60);
         System.out.println("ФИО: " + president.firstName + " " + president.lastName + ";");
         System.out.println("Должность: " + president.position + ";");
         System.out.println("Почта: " + president.email + ";");
         System.out.println("Оклад: " + president.salary + "$;");
         System.out.println("Возраст: " + president.age + " лет;");
+    }
+
+     public void personArray(String[] args) {
+        Employee[] persArray = new Employee[5];
+        persArray[0] = new Employee("Ivan", "Ivanov", "Enginner", "ivanov@yandex.ru", 50000, 23);
+        persArray[1] = new Employee("Jhon", "JavaScript", "IT", "jvIT@gmail.ru", 690000, 41);
+        persArray[2] = new Employee("Vika", "Demich", "manager", "demich@gmail.ru", 502300, 31);
+        persArray[3] = new Employee("@#$%", "lastName", "position", "email", 986700, 63);
+        persArray[4] = new Employee("23145", "lastName", "position", "email", 167800, 83);
+
+        for (int i = 0; i < persArray.length; i++) {
+            System.out.println(persArray[i].firstName + " " + persArray[i].lastName + "; " + persArray[i].position + "; " + persArray[i].email + "; " + persArray[i].salary + "; " + persArray[i].age + ";");
+        }
     }
 }
