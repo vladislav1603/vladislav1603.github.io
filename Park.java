@@ -1,40 +1,49 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Park {
-    public static class Attractions {
+    private String name;
+    private List<Attraction> attractions;
+
+    public Park(String name) {
+        this.name = name;
+        this.attractions = new ArrayList<>();
+    }
+
+    public void addAttraction(String name, int time, double price) {
+        Attraction attraction = new Attraction(name, time, price);
+        attractions.add(attraction);
+    }
+
+    // Метод для получения информации об аттракционах
+    public void displayAttractions() {
+        System.out.println("Аттракционы в парке:" + name + "-");
+        if (attractions.isEmpty()) {
+            System.out.println("Нету аттракционов.");
+        } else {
+            for (Attraction attraction : attractions) {
+                System.out.println(attraction);
+            }
+        }
+    }
+    private class Attraction {
         private String name;
-        private int workingHours;
+        private int time;
         private double price;
 
-        public Attractions(String name, int workingHours, double price) {
-
+        public Attraction(String name, int time, double price) {
             this.name = name;
-            this.workingHours = workingHours;
+            this.time = time;
             this.price = price;
-
         }
 
         public String getName() {
             return name;
         }
 
-        public int getTime() {
-            return workingHours;
+        @Override
+        public String toString() {
+            return "Аттракцион: " + name + ", Время работы: " + time + " часов, Цена за билет: " + price + " рублей;";
         }
-
-        public double getPrice() {
-            return price;
-        }
-
-    }
-
-    public static void main(String[] args) {
-
-        Park park = new Park();
-
-        Park.Attractions carusel = new Park.Attractions("Карусель", 6, 35);
-        Park.Attractions KolesoObozrenya = new Park.Attractions("Колесо Обозрения", 10, 60);
-
-        System.out.println("Название: " + carusel.getName());
-        System.out.println("Время работы: " + carusel.getTime() + " часов");
-        System.out.println("Цена за билет: " + carusel.getPrice() + " рублей");
     }
 }
