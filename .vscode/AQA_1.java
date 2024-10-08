@@ -119,6 +119,7 @@ public class AQA_1 {
     public static void main(String[] args) {
 
         animals.add(new Cat());
+        animals.add(new Cat());
         animals.add(new Dog());
 
         fillBowl(50); 
