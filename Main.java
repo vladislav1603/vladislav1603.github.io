@@ -1,24 +1,21 @@
 public class Main {
 
     public static void main(String[] args) {
-
         String[][] validArray = {
-            {"a", "b", "c", "d"},
-            {"e", "f", "g", "h"},
-            {"i", "j", "k", "l"},
-            {"m", "n", "o", "p"}
+            {"1", "2", "3", "4"},
+            {"5", "6", "7", "8"},
+            {"9", "10", "11", "12"},
+            {"13", "14", "15", "16"}
         };
 
         String[][] invalidArray = {
-            {"a", "b"},
-            {"c", "d"},
+            {"1", "2"},
+            {"3", "a"},
+            {"4", "5"},
+            {"6", "7"}
         };
 
-        try {
-            AQA_1.validateArray(validArray);  
-            AQA_1.validateArray(invalidArray); 
-        } catch (IllegalArgumentException e) {
-            System.err.println(e.getMessage());
-        }
+        AQA_1.validateArray(validArray);  
+        AQA_1.validateArray(invalidArray); 
     }
 }
