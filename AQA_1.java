@@ -3,19 +3,19 @@ public class AQA_1 {
     public static void validateArray(String[][] array) {
 
         if (array == null) {
-            throw new IllegalArgumentException("Input array cannot be null.");
+            throw new IllegalArgumentException("Массив не может быть пустым.");
         }
         
         if (array.length != 4) {
-            throw new IllegalArgumentException("Input array must have 4 rows.");
+            throw new IllegalArgumentException("Длинна массива должна быть равна 4.");
         }
         
         for (String[] row : array) {
             if (row.length != 4) {
-                throw new IllegalArgumentException("Each row in the input array must have 4 columns.");
+                throw new IllegalArgumentException("Высота массива должна быть равна 4.");
             }
         }
         
-        System.out.println("Valid 4x4 array.");
+        System.out.println("Размер массива соответвует задным условиям.");
     }
 }

@@ -15,8 +15,8 @@ public class Main {
         };
 
         try {
-            ArrayValidator.validateArray(validArray);  
-            ArrayValidator.validateArray(invalidArray); 
+            AQA_1.validateArray(validArray);  
+            AQA_1.validateArray(invalidArray); 
         } catch (IllegalArgumentException e) {
             System.err.println(e.getMessage());
         }
