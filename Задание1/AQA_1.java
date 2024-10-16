@@ -1,9 +1,11 @@
+package Задание1;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class AQA_1 {
     private static List<Animals> animals = new ArrayList<>();
-    private static double foodBowl = 10;
+    private static FoodBowl foodBowl;
 
     public static void initializeAnimals() {
         animals.add(new Cat());
@@ -11,15 +13,20 @@ public class AQA_1 {
         animals.add(new Dog());
     }
 
+    public static void setFoodBowl(double initialAmount) {
+        foodBowl = new FoodBowl(initialAmount);
+    }
+
     public static void fillBowl(double foodAmount) {
-        foodBowl += foodAmount;
-        System.out.println("Чаша для еды наполнена. Текущее количество еды: " + foodBowl);
+        foodBowl.fill(foodAmount);
     }
 
     public static void allEat() {
         System.out.println("Все животные едят...");
+        double foodPerAnimal = foodBowl.getFoodAmount() / animals.size();
         for (Animals animal : animals) {
-            animal.eat(foodBowl / animals.size());
+            animal.eat(foodPerAnimal);
+            foodBowl.consume(foodPerAnimal); // Consume food from the bowl
         }
     }
 
@@ -29,6 +36,10 @@ public class AQA_1 {
             String type = animal instanceof Cat ? "Кошка" : "Собака";
             System.out.println(type + (animal.isSatiated() ? " наелась." : " не наелась."));
         }
+    }
+
+    public static int getTotalAnimalCount() {
+        return animals.size(); // Returns the total count of animals in the list
     }
 
     public static int getCatCount() {

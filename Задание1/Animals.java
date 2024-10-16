@@ -1,3 +1,5 @@
+package Задание1;
+
 abstract class Animals {
     public abstract void run(double distance);
     public abstract void swim(double distance);
