@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 abstract class Animals {
     public abstract void run(double distance);
     public abstract void swim(double distance);
@@ -109,46 +106,5 @@ class Dog extends Animals {
 
     public static int getDogCount() {
         return dogCount;
-    }
-}
-
-public class AQA_1 {
-    private static List<Animals> animals = new ArrayList<>();
-    private static double foodBowl = 10; 
-
-    public static void main(String[] args) {
-
-        animals.add(new Cat());
-        animals.add(new Cat());
-        animals.add(new Dog());
-
-        fillBowl(50); 
-
-        allEat();
-
-        displaySatietyStatus();
-        
-        System.out.println("Количество кошек: " + Cat.getCatCount());
-        System.out.println("Количество собак: " + Dog.getDogCount());
-    }
-
-    private static void fillBowl(double foodAmount) {
-        foodBowl += foodAmount;
-        System.out.println("Чаша для еды наполнена. Текущее количество еды: " + foodBowl);
-    }
-
-    private static void allEat() {
-        System.out.println("Все животные едят...");
-        for (Animals animal : animals) {
-            animal.eat(foodBowl / animals.size());
-        }
-    }
-
-    private static void displaySatietyStatus() {
-        System.out.println("Статус сытости:");
-        for (Animals animal : animals) {
-            String type = animal instanceof Cat ? "Кошка" : "Собака";
-            System.out.println(type + (animal.isSatiated() ? " наелась." : " не наелась."));
-        }
     }
 }
