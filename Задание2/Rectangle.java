@@ -18,14 +18,5 @@ public class Rectangle implements Shape {
     public double perimeter() {
         return 2 * (length + width);
     }
-
-    @Override
-    public String backgroundColor() {
-        return "Зелёный";
-    }
-
-    @Override
-    public String borderColor() {
-        return "Синий";
-    }
+    
 }

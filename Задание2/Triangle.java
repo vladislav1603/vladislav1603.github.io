@@ -25,13 +25,4 @@ public class Triangle implements Shape {
         return side1 + side2 + side3;
     }
 
-    @Override
-    public String backgroundColor() {
-        return "Желтый";
-    }
-
-    @Override
-    public String borderColor() {
-        return "Желтый";
-    }
 }
