@@ -1,0 +1,147 @@
+Index: src/main/java/org/example/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\r\n\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n        System.out.println(\"Hello world!\");\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/Main.java b/src/main/java/org/example/Main.java
+--- a/src/main/java/org/example/Main.java	(revision 05301a083854c501d53a98b219865525d139c4aa)
++++ b/src/main/java/org/example/Main.java	(date 1729512017598)
+@@ -1,7 +1,12 @@
+-package org.example;
++import org.testng.TestNG;
++
++import java.util.Collections;
+ 
+ public class Main {
+     public static void main(String[] args) {
+-        System.out.println("Hello world!");
++        TestNG testng = new TestNG();
++        testng.setTestClasses(new Class[] { MTSOnlineRechargeTest.class });
++        testng.setGroups(Collections.singletonList("your_group_name")); // Set a group if you are using groups
++        testng.run();
+     }
+-}
+\ No newline at end of file
++}
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1729511672127)
++++ b/.idea/vcs.xml	(date 1729511672127)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"ProjectRootManager\" version=\"2\" default=\"true\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 05301a083854c501d53a98b219865525d139c4aa)
++++ b/.idea/misc.xml	(date 1729511629451)
+@@ -1,7 +1,14 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="ProjectRootManager" version="2" default="true">
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="23" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: test/MTS_Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/MTS_Test.java b/test/MTS_Test.java
+new file mode 100644
+--- /dev/null	(date 1729511969377)
++++ b/test/MTS_Test.java	(date 1729511969377)
+@@ -0,0 +1,66 @@
++import org.openqa.selenium.By;
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.WebElement;
++import org.openqa.selenium.chrome.ChromeDriver;
++import org.openqa.selenium.support.ui.ExpectedConditions;
++import org.openqa.selenium.support.ui.WebDriverWait;
++import org.testng.Assert;
++import org.testng.annotations.AfterClass;
++import org.testng.annotations.BeforeClass;
++import org.testng.annotations.Test;
++
++import java.time.Duration;
++import java.util.List;
++
++public class MTS_Test {
++    private WebDriver driver;
++    private WebDriverWait wait;
++
++    @BeforeClass
++    public void setUp() {
++        // Set the path for the ChromeDriver executable
++        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
++        driver = new ChromeDriver();
++        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
++        driver.get("https://www.mts.by/");
++    }
++
++    @Test
++    public void testOnlineRechargeBlock() {
++        // Check Block Name
++        WebElement block = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[contains(text(), 'Онлайн пополнение без комиссии')]")));
++        Assert.assertEquals(block.getText(), "Онлайн пополнение без комиссии");
++
++        // Check Availability of Payment System Logos
++        List<WebElement> logos = driver.findElements(By.cssSelector(".payment-logos img")); // Adjust the selector based on actual markup
++        Assert.assertTrue(logos.size() > 0, "Payment system logos are not displayed");
++
++        // Check "Подробнее о сервисе" link
++        WebElement moreInfoLink = driver.findElement(By.linkText("Подробнее о сервисе"));
++        Assert.assertTrue(moreInfoLink.isDisplayed(), "More info link is not displayed");
++        moreInfoLink.click();
++
++        // Verify the link works (you may need to adjust this based on actual URL)
++        wait.until(ExpectedConditions.urlContains("expected_url_part_after_click"));
++
++        // Return to the main page after the link click (you may need to navigate back)
++        driver.navigate().back();
++
++        // Filling out the fields and clicking "Продолжить"
++        WebElement phoneField = driver.findElement(By.id("phone")); // Adjust selector as necessary
++        WebElement amountField = driver.findElement(By.id("amount")); // Adjust selector as necessary
++        WebElement continueButton = driver.findElement(By.xpath("//button[contains(text(), 'Продолжить')]"));
++
++        phoneField.sendKeys("1234567890"); // Example phone number
++        amountField.sendKeys("10"); // Example amount
++        continueButton.click();
++
++        // Verify next page or action
++        wait.until(ExpectedConditions.urlContains("expected_next_page_url")); // Adjust based on expected outcome
++    }
++
++    @AfterClass
++    public void tearDown() {
++        driver.quit();
++    }
++}
