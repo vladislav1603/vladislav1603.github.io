@@ -1,66 +1,64 @@
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 
-import java.time.Duration;
 import java.util.List;
 
-public class MTSOnlineRechargeTest {
-    private WebDriver driver;
-    private WebDriverWait wait;
+import static org.junit.Assert.assertEquals;
 
-    @BeforeClass
-    public void setUp() {
-        // Set the path for the ChromeDriver executable
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+public class MTSOnlineRechargeTest {
+
+    private  WebDriver driver;
+
+    @Before
+    public  void  setUp() {
+        System.setProperty("webdriver.chrome.driver", "C:/WebDiver/bin/chromedriver.exe");
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.manage().window().maximize();
         driver.get("https://www.mts.by/");
     }
 
     @Test
-    public void testOnlineRechargeBlock() {
-        // Check Block Name
-        WebElement block = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[contains(text(), 'Онлайн пополнение без комиссии')]")));
-        Assert.assertEquals(block.getText(), "Онлайн пополнение без комиссии");
+    public void TestOpenPage() {
 
-        // Check Availability of Payment System Logos
-        List<WebElement> logos = driver.findElements(By.cssSelector(".payment-logos img")); // Adjust the selector based on actual markup
-        Assert.assertTrue(logos.size() > 0, "Payment system logos are not displayed");
+        String expectedTitle = "МТС – мобильный оператор в Беларуси";
+        String actualTitle = driver.getTitle();
+        assertEquals(expectedTitle, actualTitle);
 
-        // Check "Подробнее о сервисе" link
-        WebElement moreInfoLink = driver.findElement(By.linkText("Подробнее о сервисе"));
-        Assert.assertTrue(moreInfoLink.isDisplayed(), "More info link is not displayed");
-        moreInfoLink.click();
+        WebElement paymentBlock = driver.findElement(By.xpath("//h2[contains(text(), 'Онлайн пополнение')]"));
+        Assert.assertNotNull("Блок 'Онлайн пополнение' не найден!", paymentBlock);
+        List<WebElement> paySystemLogos = driver.findElements(By.cssSelector("img[alt='MasterCard Secure Code']"));
+        Assert.assertFalse("Не найдены логотипы платёжных систем!", paySystemLogos.isEmpty());
 
-        // Verify the link works (you may need to adjust this based on actual URL)
-        wait.until(ExpectedConditions.urlContains("expected_url_part_after_click"));
+        WebElement link = driver.findElement(By.linkText("Подробнее о сервисе")); // Adjust text as needed
+        String originalUrl = driver.getCurrentUrl();
+        link.click();
+        String newUrl = driver.getCurrentUrl();
+        Assert.assertNotEquals("Ссылка не переносит нас на другую страницу!", originalUrl, newUrl);
 
-        // Return to the main page after the link click (you may need to navigate back)
-        driver.navigate().back();
+        WebElement phoneNumberField = driver.findElement(By.xpath("(//input[@id='connection-phone'])[1]"));
+        WebElement paymentAmountField = driver.findElement(By.xpath("(//input[@id='connection-sum'])[1]"));
+        WebElement continueButton = driver.findElement(By.xpath("(//button[@type='submit'][contains(text(),'Продолжить')])[1]"));
 
-        // Filling out the fields and clicking "Продолжить"
-        WebElement phoneField = driver.findElement(By.id("phone")); // Adjust selector as necessary
-        WebElement amountField = driver.findElement(By.id("amount")); // Adjust selector as necessary
-        WebElement continueButton = driver.findElement(By.xpath("//button[contains(text(), 'Продолжить')]"));
+        String phoneNumber = "297777777";
+        String paymentAmount = "100";
 
-        phoneField.sendKeys("1234567890"); // Example phone number
-        amountField.sendKeys("10"); // Example amount
+        phoneNumberField.sendKeys(phoneNumber);
+        paymentAmountField.sendKeys(paymentAmount);
+
         continueButton.click();
 
-        // Verify next page or action
-        wait.until(ExpectedConditions.urlContains("expected_next_page_url")); // Adjust based on expected outcome
     }
 
-    @AfterClass
+    @After
     public void tearDown() {
-        driver.quit();
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }

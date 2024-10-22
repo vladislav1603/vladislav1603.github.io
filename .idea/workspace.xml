@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51d37d4b-8dac-46fb-a531-743f3359601b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MTSOnlineRechargeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="51d37d4b-8dac-46fb-a531-743f3359601b" name="Changes" comment="Обновление задания">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MTSOnlineRechargeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MTSOnlineRechargeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,43 +62,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;JUnit.FactorialTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;TestNG.factorialCalculatorTestNG.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Lesson__15&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/work/ASTON_AQA/vladislav1603.github.io&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JUnit.FactorialTest.executor": "Run",
+    "JUnit.MTSOnlineRechargeTest.TestOpenPage.executor": "Run",
+    "JUnit.MTSOnlineRechargeTest.executor": "Run",
+    "JUnit.MTSOnlineRechargeTest.testOnlineRechargeBlock.executor": "Run",
+    "Maven.vladislav1603.github.io [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.factorialCalculatorTestNG.executor": "Run",
+    "git-widget-placeholder": "Lesson__15",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/work/ASTON_AQA/vladislav1603.github.io",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\work\ASTON_AQA\vladislav1603.github.io" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="FactorialTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AQA_1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FactorialTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MTSOnlineRechargeTest">
     <configuration name="FactorialTestNG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AQA_1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FactorialTestNG" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MTSOnlineRechargeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vladislav1603.github.io" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MTSOnlineRechargeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MTSOnlineRechargeTest.TestOpenPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vladislav1603.github.io" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MTSOnlineRechargeTest" />
+      <option name="METHOD_NAME" value="TestOpenPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MTSOnlineRechargeTest.testOnlineRechargeBlock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vladislav1603.github.io" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MTSOnlineRechargeTest" />
+      <option name="METHOD_NAME" value="testOnlineRechargeBlock" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,9 +140,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.factorialCalculatorTestNG" />
-        <item itemvalue="JUnit.FactorialTestNG" />
-        <item itemvalue="JUnit.FactorialTest" />
+        <item itemvalue="JUnit.MTSOnlineRechargeTest" />
+        <item itemvalue="JUnit.MTSOnlineRechargeTest.TestOpenPage" />
+        <item itemvalue="JUnit.MTSOnlineRechargeTest.testOnlineRechargeBlock" />
         <item itemvalue="TestNG.factorialCalculatorTestNG" />
         <item itemvalue="JUnit.FactorialTestNG" />
       </list>
@@ -160,12 +181,32 @@
       <option name="project" value="LOCAL" />
       <updated>1729436083503</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Обновление задания">
+      <option name="closed" value="true" />
+      <created>1729518574720</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729518574720</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Создана ветка Lesson_14_junit_5" />
     <MESSAGE value="Создана ветка Lesson_14_testng" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создана ветка Lesson_14_testng" />
+    <MESSAGE value="Обновление задания" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновление задания" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/MTSOnlineRechargeTest.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
