@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51d37d4b-8dac-46fb-a531-743f3359601b" name="Changes" comment="Обновление задания">
+    <list default="true" id="51d37d4b-8dac-46fb-a531-743f3359601b" name="Changes" comment="Обновление задания 15">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MTSOnlineRechargeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MTSOnlineRechargeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,10 @@
     "JUnit.FactorialTest.executor": "Run",
     "JUnit.MTSOnlineRechargeTest.TestOpenPage.executor": "Run",
     "JUnit.MTSOnlineRechargeTest.executor": "Run",
+    "JUnit.MTSOnlineRechargeTest.testLinkNavigatesToAnotherPage.executor": "Run",
     "JUnit.MTSOnlineRechargeTest.testOnlineRechargeBlock.executor": "Run",
+    "JUnit.MTSOnlineRechargeTest.testPaymentSystemLogosAreCorrect.executor": "Run",
+    "JUnit.MTSOnlineRechargeTest.testSubmitPaymentDetails.executor": "Run",
     "Maven.vladislav1603.github.io [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -88,16 +92,7 @@
       <recent name="C:\work\ASTON_AQA\vladislav1603.github.io" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MTSOnlineRechargeTest">
-    <configuration name="FactorialTestNG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AQA_1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FactorialTestNG" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MTSOnlineRechargeTest.testSubmitPaymentDetails">
     <configuration name="MTSOnlineRechargeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vladislav1603.github.io" />
       <option name="PACKAGE_NAME" value="" />
@@ -117,34 +112,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MTSOnlineRechargeTest.testOnlineRechargeBlock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MTSOnlineRechargeTest.testLinkNavigatesToAnotherPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vladislav1603.github.io" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MTSOnlineRechargeTest" />
-      <option name="METHOD_NAME" value="testOnlineRechargeBlock" />
+      <option name="METHOD_NAME" value="testLinkNavigatesToAnotherPage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="factorialCalculatorTestNG" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQA_1" />
+    <configuration name="MTSOnlineRechargeTest.testPaymentSystemLogosAreCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vladislav1603.github.io" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="factorialCalculatorTestNG" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="MAIN_CLASS_NAME" value="MTSOnlineRechargeTest" />
+      <option name="METHOD_NAME" value="testPaymentSystemLogosAreCorrect" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MTSOnlineRechargeTest.testSubmitPaymentDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vladislav1603.github.io" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MTSOnlineRechargeTest" />
+      <option name="METHOD_NAME" value="testSubmitPaymentDetails" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MTSOnlineRechargeTest.testSubmitPaymentDetails" />
+        <item itemvalue="JUnit.MTSOnlineRechargeTest.testLinkNavigatesToAnotherPage" />
+        <item itemvalue="JUnit.MTSOnlineRechargeTest.testPaymentSystemLogosAreCorrect" />
         <item itemvalue="JUnit.MTSOnlineRechargeTest" />
         <item itemvalue="JUnit.MTSOnlineRechargeTest.TestOpenPage" />
-        <item itemvalue="JUnit.MTSOnlineRechargeTest.testOnlineRechargeBlock" />
-        <item itemvalue="TestNG.factorialCalculatorTestNG" />
-        <item itemvalue="JUnit.FactorialTestNG" />
       </list>
     </recent_temporary>
   </component>
@@ -189,24 +193,22 @@
       <option name="project" value="LOCAL" />
       <updated>1729518574720</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Обновление задания 15">
+      <option name="closed" value="true" />
+      <created>1729586832039</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729586832039</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Создана ветка Lesson_14_junit_5" />
     <MESSAGE value="Создана ветка Lesson_14_testng" />
     <MESSAGE value="Обновление задания" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обновление задания" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/MTSOnlineRechargeTest.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Обновление задания 15" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновление задания 15" />
   </component>
 </project>
