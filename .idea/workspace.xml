@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="071c32ad-e1de-4734-9b77-10bc8fc6ce7e" name="Changes" comment="Создана ветка Lesson_14_testng" />
+    <list default="true" id="071c32ad-e1de-4734-9b77-10bc8fc6ce7e" name="Changes" comment="Создана ветка Lesson_14_testng">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/_template__of_JUnit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PostmanEchoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lesson_14_junit_5" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,11 +69,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Main.executor": "Run",
     "JUnit.FactorialTest.executor": "Run",
+    "JUnit.PostmanEchoTest.executor": "Run",
+    "JUnit.PostmanEchoTest.testGetRequest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.factorialCalculatorTestNG.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Lesson__17",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/work/ASTON_AQA/vladislav1603.github.io",
@@ -80,34 +91,43 @@
       <recent name="C:\work\ASTON_AQA\vladislav1603.github.io" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.PostmanEchoTest">
     <configuration name="FactorialTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AQA_1" />
+      <module name="vladislav1603.github.io" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FactorialTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="FactorialTestNG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AQA_1" />
+      <module name="vladislav1603.github.io" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FactorialTestNG" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
+    <configuration name="PostmanEchoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vladislav1603.github.io" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PostmanEchoTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+    <configuration name="PostmanEchoTest.testGetRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vladislav1603.github.io" />
-      <option name="filePath" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PostmanEchoTest" />
+      <option name="METHOD_NAME" value="testGetRequest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,13 +143,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.PostmanEchoTest" />
+      <item itemvalue="JUnit.PostmanEchoTest.testGetRequest" />
+      <item itemvalue="JUnit.FactorialTest" />
+      <item itemvalue="JUnit.FactorialTestNG" />
+      <item itemvalue="TestNG.factorialCalculatorTestNG" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PostmanEchoTest" />
+        <item itemvalue="JUnit.PostmanEchoTest.testGetRequest" />
         <item itemvalue="TestNG.factorialCalculatorTestNG" />
         <item itemvalue="JUnit.FactorialTestNG" />
         <item itemvalue="JUnit.FactorialTest" />
-        <item itemvalue="TestNG.factorialCalculatorTestNG" />
-        <item itemvalue="JUnit.FactorialTestNG" />
       </list>
     </recent_temporary>
   </component>
