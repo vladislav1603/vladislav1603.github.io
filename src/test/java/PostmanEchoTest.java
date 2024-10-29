@@ -34,13 +34,13 @@ public class PostmanEchoTest {
     public void testPostFormData() {
         Response response = RestAssured.given()
                 .contentType("application/x-www-form-urlencoded")
-                .formParam("foo", "bar")
-                .formParam("baz", "qux")
+                .formParam("foo1", "bar1")
+                .formParam("foo2", "bar2")
                 .post(BASE_URL + "/post");
 
         response.then().statusCode(200)
-                .body("form.foo", equalTo("bar"))
-                .body("form.baz", equalTo("qux"));
+                .body("form.foo1", equalTo("bar1"))
+                .body("form.foo2", equalTo("bar2"));
     }
 
 

@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="071c32ad-e1de-4734-9b77-10bc8fc6ce7e" name="Changes" comment="Создана ветка Lesson_14_testng">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/_template__of_JUnit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PostmanEchoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="071c32ad-e1de-4734-9b77-10bc8fc6ce7e" name="Changes" comment="Создана ветка Lesson_17">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PostmanEchoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PostmanEchoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +68,7 @@
     "JUnit.FactorialTest.executor": "Run",
     "JUnit.PostmanEchoTest.executor": "Run",
     "JUnit.PostmanEchoTest.testGetRequest.executor": "Run",
+    "JUnit.PostmanEchoTest.testPostFormData.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.factorialCalculatorTestNG.executor": "Run",
@@ -91,17 +87,7 @@
       <recent name="C:\work\ASTON_AQA\vladislav1603.github.io" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PostmanEchoTest">
-    <configuration name="FactorialTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="vladislav1603.github.io" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FactorialTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.PostmanEchoTest.testPostFormData">
     <configuration name="FactorialTestNG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="vladislav1603.github.io" />
       <option name="PACKAGE_NAME" value="" />
@@ -132,6 +118,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PostmanEchoTest.testPostFormData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="vladislav1603.github.io" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PostmanEchoTest" />
+      <option name="METHOD_NAME" value="testPostFormData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="factorialCalculatorTestNG" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQA_1" />
       <option name="PACKAGE_NAME" value="" />
@@ -146,17 +142,17 @@
     <list>
       <item itemvalue="JUnit.PostmanEchoTest" />
       <item itemvalue="JUnit.PostmanEchoTest.testGetRequest" />
-      <item itemvalue="JUnit.FactorialTest" />
+      <item itemvalue="JUnit.PostmanEchoTest.testPostFormData" />
       <item itemvalue="JUnit.FactorialTestNG" />
       <item itemvalue="TestNG.factorialCalculatorTestNG" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PostmanEchoTest.testPostFormData" />
         <item itemvalue="JUnit.PostmanEchoTest" />
         <item itemvalue="JUnit.PostmanEchoTest.testGetRequest" />
         <item itemvalue="TestNG.factorialCalculatorTestNG" />
         <item itemvalue="JUnit.FactorialTestNG" />
-        <item itemvalue="JUnit.FactorialTest" />
       </list>
     </recent_temporary>
   </component>
@@ -193,12 +189,21 @@
       <option name="project" value="LOCAL" />
       <updated>1729436083503</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Создана ветка Lesson_17">
+      <option name="closed" value="true" />
+      <created>1730214562029</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730214562030</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Создана ветка Lesson_14_junit_5" />
     <MESSAGE value="Создана ветка Lesson_14_testng" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создана ветка Lesson_14_testng" />
+    <MESSAGE value="Создана ветка Lesson_17" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создана ветка Lesson_17" />
   </component>
 </project>
